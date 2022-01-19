@@ -1,2 +1,2 @@
 language = "bash"
-run = "node server.js"
+run = "bash main.sh"

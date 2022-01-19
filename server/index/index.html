@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="index/style.css" />
+    <title>InventoryLlama</title>
+    <meta name="description" content="An easy to use school inventory managment system." />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <header>InventoryLlama: Orenda Lunch Orders</header>
+    <main>
+      <nav>
+        <a class="menubtn" href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+            <path d="M97.092 36.078H30.908a2.111 2.111 0 0 0 0 4.222h66.184a2.111 2.111 0 0 0 0-4.222zM97.092 61.889H30.908a2.111 2.111 0 0 0 0 4.222h66.184a2.111 2.111 0 0 0 0-4.222zM97.092 87.7H30.908a2.111 2.111 0 0 0 0 4.222h66.184a2.111 2.111 0 0 0 0-4.222z"/>
+          </svg>
+          <span>menu</span>
+        </a>
+        <a href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+            <path d="M55.579 31.579a2 2 0 0 1 .208 2.583l-1.284 1.781a1.996 1.996 0 0 1-3.036.245A462554.14 462554.14 0 0 1 32 16.722L12.533 36.188a1.996 1.996 0 0 1-3.036-.245l-1.284-1.781a2 2 0 0 1 .208-2.583L32 8l23.579 23.579z" style="fill:none;stroke:#000;stroke-width:2px"/>
+            <path d="M13.977 34.745 32 16.722l18.023 18.023v20.002a2.25 2.25 0 0 1-.66 1.593 2.25 2.25 0 0 1-1.593.66H16.23a2.25 2.25 0 0 1-1.593-.66 2.25 2.25 0 0 1-.66-1.593V34.745zM20.736 19.264l-7.885 7.885V15.322h7.885v3.942z" style="fill:none;stroke:#000;stroke-width:2px"/>
+            <path d="M37 44.5a1.503 1.503 0 0 0-1.5-1.5h-7a1.503 1.503 0 0 0-1.5 1.5V57h10V44.5z" style="fill:none;stroke:#000;stroke-width:2px"/>
+          </svg>
+          <span>home</span>
+        </a>
+        <a href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M20 11v5a1 1 0 0 1-2 0v-4H7.414l1.293 1.293a1 1 0 0 1-1.414 1.414l-3-3a1 1 0 0 1 0-1.416l3-3a1 1 0 0 1 1.414 1.416L7.414 10H19a1 1 0 0 1 1 1z"/>
+          </svg>
+          <span>undo</span>
+        </a>
+        <a href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="m19.706 11.708-3 3a1 1 0 0 1-1.414-1.414L16.586 12H6v4a1 1 0 0 1-2 0v-5a1 1 0 0 1 1-1h11.586l-1.293-1.293a1 1 0 1 1 1.414-1.414l3 3a1 1 0 0 1-.001 1.415z"/>
+          </svg>
+          <span>redo</span>
+        </a>
+        <a href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M12 5a1 1 0 0 1 1 1v12a1 1 0 1 1-2 0V6a1 1 0 0 1 1-1z"/>
+            <path d="M5 12a1 1 0 0 1 1-1h12a1 1 0 1 1 0 2H6a1 1 0 0 1-1-1z"/>
+          </svg>
+          <span>add order</span>
+        </a>
+        <a href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+            <path d="M43.333 83.333A6.668 6.668 0 0 1 36.667 90a6.667 6.667 0 1 1 6.666-6.667zM73.333 83.333c0 3.679-2.984 6.667-6.666 6.667S60 87.012 60 83.333c0-3.685 2.985-6.667 6.667-6.667s6.666 2.982 6.666 6.667zM90 23.333H25.439l-1.064-6.751c-.573-3.62-4.04-6.582-7.708-6.582H10v6.666h7.637l8.428 53.373c.286 1.81 2.021 3.294 3.854 3.294h53.414v-6.667H32.282L31.228 60h52.105L90 23.333zm-12.229 30H30.176L26.491 30h55.521l-4.241 23.333z"/>
+          </svg>
+          <span>cart</span>
+        </a>
+      </nav>
+      <section class="ordersheader">
+        <span>Orders</span>
+        <input type="search" aria-label="search"></input>
+      </section>
+      <section class="stockheader">Stock</section>
+      <section class="orders">
+        <div>
+          <span>apples</span>
+          <input type="checkbox"></input>
+          <input type="number" value="300"></input>
+          <button>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
+              <path style="fill:#000;" d="M20.5 4h-3.64l-.69-2.06a1.37 1.37 0 0 0-1.3-.94h-4.74a1.37 1.37 0 0 0-1.3.94L8.14 4H4.5a.5.5 0 0 0 0 1h.34l1 17.59A1.45 1.45 0 0 0 7.2 24h10.6a1.45 1.45 0 0 0 1.41-1.41L20.16 5h.34a.5.5 0 0 0 0-1zM9.77 2.26a.38.38 0 0 1 .36-.26h4.74a.38.38 0 0 1 .36.26L15.81 4H9.19zm8.44 20.27a.45.45 0 0 1-.41.47H7.2a.45.45 0 0 1-.41-.47L5.84 5h13.32z"/>
+                <path style="fill:#000;" d="M9.5 10a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 1 0v-7a.5.5 0 0 0-.5-.5zM12.5 9a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 1 0v-9a.5.5 0 0 0-.5-.5zM15.5 10a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 1 0v-7a.5.5 0 0 0-.5-.5z"/>
+            </svg>
+          </button>
+          <button>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+              <path d="m46.84 5.32-4.16-4.16a4 4 0 0 0-5.58 0C1.7 36.55 3.65 34.52 3.53 34.88S3 36.78 0 46.72A1 1 0 0 0 1 48c.21 0 12.08-3.45 12.39-3.68s-2.75 2.79 33.45-33.42a4 4 0 0 0 0-5.58zM35 6.05 42 13l-1.37 1.37-6.97-6.95zM10.45 38.91l-1-.34-.34-1L35 11.61 36.39 13zm21.8-30.08 1.36 1.37L7.79 36l-1.71-1zM3.32 42.67a7.68 7.68 0 0 1 2 2l-2.85.84zm4 1.42a9.88 9.88 0 0 0-3.43-3.43l1.16-3.94 2 1.23c.88 2.62.38 2.08 2.94 2.94l1.23 2zM13 41.92l-1-1.71 25.8-25.82 1.37 1.36zM45.43 9.49l-2.07 2.07-6.92-6.92 2.07-2.07a1.94 1.94 0 0 1 2.75 0l4.17 4.17a1.94 1.94 0 0 1 0 2.75z"/>
+            </svg>
+          </button>
+        </div>
+        <div>
+          <span>bananas</span>
+          <input type="checkbox"></input>
+          <input type="number" value="100"></input>
+          <button>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
+              <path style="fill:#000;" d="M20.5 4h-3.64l-.69-2.06a1.37 1.37 0 0 0-1.3-.94h-4.74a1.37 1.37 0 0 0-1.3.94L8.14 4H4.5a.5.5 0 0 0 0 1h.34l1 17.59A1.45 1.45 0 0 0 7.2 24h10.6a1.45 1.45 0 0 0 1.41-1.41L20.16 5h.34a.5.5 0 0 0 0-1zM9.77 2.26a.38.38 0 0 1 .36-.26h4.74a.38.38 0 0 1 .36.26L15.81 4H9.19zm8.44 20.27a.45.45 0 0 1-.41.47H7.2a.45.45 0 0 1-.41-.47L5.84 5h13.32z"/>
+                <path style="fill:#000;" d="M9.5 10a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 1 0v-7a.5.5 0 0 0-.5-.5zM12.5 9a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 1 0v-9a.5.5 0 0 0-.5-.5zM15.5 10a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 1 0v-7a.5.5 0 0 0-.5-.5z"/>
+            </svg>
+          </button>
+          <button>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+              <path d="m46.84 5.32-4.16-4.16a4 4 0 0 0-5.58 0C1.7 36.55 3.65 34.52 3.53 34.88S3 36.78 0 46.72A1 1 0 0 0 1 48c.21 0 12.08-3.45 12.39-3.68s-2.75 2.79 33.45-33.42a4 4 0 0 0 0-5.58zM35 6.05 42 13l-1.37 1.37-6.97-6.95zM10.45 38.91l-1-.34-.34-1L35 11.61 36.39 13zm21.8-30.08 1.36 1.37L7.79 36l-1.71-1zM3.32 42.67a7.68 7.68 0 0 1 2 2l-2.85.84zm4 1.42a9.88 9.88 0 0 0-3.43-3.43l1.16-3.94 2 1.23c.88 2.62.38 2.08 2.94 2.94l1.23 2zM13 41.92l-1-1.71 25.8-25.82 1.37 1.36zM45.43 9.49l-2.07 2.07-6.92-6.92 2.07-2.07a1.94 1.94 0 0 1 2.75 0l4.17 4.17a1.94 1.94 0 0 1 0 2.75z"/>
+            </svg>
+          </button>
+        </div>
+      </section>
+      <section class="stock">
+        <table>
+          <tr><th>item</th><th>count</th></tr>
+          <tr><td>banana</td><td>50</td></tr>
+          <tr><td>pizza</td><td>200</td></tr>
+        </table>
+      </section>
+    </main>
+    <script src="index/script.js"></script>
+  </body>
+</html>

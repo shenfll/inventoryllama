@@ -4,9 +4,14 @@ var path = require("path");
 
 http.createServer(function(request, response){
   console.log(request.url);
-  var filePath = "." + request.url;
-  if(filePath == "./"){
-    filePath = "./index.html";
+  if(request.url == "/index/index.html"){
+    response.writeHead(302, {"Location": "/"});
+    response.end();
+    return;
+  }
+  var filePath = "server" + request.url;
+  if(request.url == "/"){
+    filePath = "server/index/index.html";
   }
   var mimeTypes = {
     ".html": "text/html",
@@ -27,7 +32,7 @@ http.createServer(function(request, response){
   };
   fs.readFile(filePath, function(error, content){
     if(error){
-      fs.readFile("./error.html", function(error, content){
+      fs.readFile("server/error/error.html", function(error, content){
         response.writeHead(404, {"Content-Type": "text/html"});
         response.end(content, "utf-8");
       });
